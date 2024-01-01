@@ -25,10 +25,6 @@ if %errorLevel% == 0 (
 :main
 
 set WORKDIR=%~dp0
-set netcmd=%WORKDIR%snet.bat
+set netcmd=%WORKDIR%dhcp.bat
 
-set IPADDR=192.168.6.101
-set GATEWAY=192.168.6.241
-set PRIMARYDNS=8.8.8.8
-
-START /wait   CMD /c "!netcmd! !IPADDR! !NETMASK! !GATEWAY! !PRIMARYDNS! "
+START /wait   CMD /c "!netcmd!"
